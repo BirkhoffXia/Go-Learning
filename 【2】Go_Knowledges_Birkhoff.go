@@ -19,13 +19,15 @@ set GOROOT=D:\Software Install\Go
 ##Git 
 	
 ##VScode
+        Go 插件
 	GOPROXY: https://proxy.golang.com.cn,direct(如果要装插件 改为这个环境变量即可)
-	cmd:
+	cmd:安装可能需要梯子
 		go install -v golang.org/x/tools/gopls@latest 
 		go install -v github.com/cweill/gotests/gotests@v1.6.0
 		go install -v github.com/fatih/gomodifytags@v1.16.0 
 		go install -v github.com/go-delve/delve/cmd/dlv@latest
 
+##写第一个GO程序
 package main
 
 import "fmt"
@@ -34,12 +36,15 @@ func main() {
 	fmt.Printf("BIRKHOFF FIRST GO PROCESS")
 }
 
+CTRL + J : 启动命令行
+
+##启动编译可执行文件
 PS E:\goprojects> go build main.go
 PS E:\goprojects> .\main.exe
 BIRKHOFF FIRST GO PROCESS
 PS E:\goprojects> 
 
-#表示编译并执行代码
+##表示编译并执行代码
 go run main.go
 
 ##F5执行 run-debug模式 会报错
@@ -54,6 +59,7 @@ go: to add module requirements and sums:
 #再看F5 
 
 ##outline map插件-方便为了查看源码函数
+
 ##Golang postfix插件-方便后期开发方便 
 
 =========================================================================================================================
