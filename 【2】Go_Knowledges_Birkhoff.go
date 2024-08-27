@@ -1,5 +1,5 @@
 【1-Go开发环境】
-##Install ： Go:1.20.7 （https://go.dev/dl/）
+##Install ： Go:1.22.0 （https://go.dev/dl/）
 
 ##配置环境变量
 	GOPATH 
@@ -18,7 +18,7 @@ set GOROOT=D:\Software Install\Go
 
 ##Git 
 	
-##VScode
+##VScode: 1.92.2 版本
         Go 插件
 	GOPROXY: https://proxy.golang.com.cn,direct(如果要装插件 改为这个环境变量即可)
 	cmd:安装可能需要梯子
