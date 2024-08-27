@@ -1,5 +1,7 @@
 【1-Go开发环境】
-Go:1.20.7
+##Install ： Go:1.20.7 （https://go.dev/dl/）
+
+##配置环境变量
 	GOPATH 
 	GOROOT
 	GOPROXY
@@ -14,9 +16,9 @@ set GOPATH=C:\Users\BIRKHOFF\go
 set GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
 set GOROOT=D:\Software Install\Go
 
-Git 
+##Git 
 	
-VScode
+##VScode
 	GOPROXY: https://proxy.golang.com.cn,direct(如果要装插件 改为这个环境变量即可)
 	cmd:
 		go install -v golang.org/x/tools/gopls@latest 
