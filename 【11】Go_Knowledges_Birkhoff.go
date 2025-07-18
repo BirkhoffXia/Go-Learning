@@ -2,40 +2,42 @@ Viedo Date: 2023/10/28
 Made By:	BIRKHOFF
 Date:	2024-06-26
 
-¡¾11-1-Ê±¼ä¡¿
+## æ—¶é—´ã€åŒ…ç®¡ç†ã€logåŒ…ã€zerolog
+
+ã€11-1-æ—¶é—´ã€‘
 =====================================================================
-[Ê±¼ä]
-Ê±¼äÊÇ·Ç³£ÖØÒªµÄ£¬Àë¿ªÁËÊ±¼ä£¬¼¸ºõÃ»ÓĞÄÄ¸öÉú²ú»·¾³Êı¾İÄÜ¹»ÓĞÒâÒå¡£
-ÔÚGoÓïÑÔÖĞ£¬Ê±¼ä¶¨ÒåÎªTime½á¹¹Ìå¡£
+[æ—¶é—´]
+æ—¶é—´æ˜¯éå¸¸é‡è¦çš„ï¼Œç¦»å¼€äº†æ—¶é—´ï¼Œå‡ ä¹æ²¡æœ‰å“ªä¸ªç”Ÿäº§ç¯å¢ƒæ•°æ®èƒ½å¤Ÿæœ‰æ„ä¹‰ã€‚
+åœ¨Goè¯­è¨€ä¸­ï¼Œæ—¶é—´å®šä¹‰ä¸ºTimeç»“æ„ä½“ã€‚
 
-	Ê±¼ä×Ö·û´®½âÎöParse
-		ÈÕÖ¾·ÖÎö£¬ÈÕÖ¾¾ÍÊÇÎÄ±¾ÎÄ¼ş
-		×Ö·û´®=>TimeÊµÀı
-		½âÎöÊ±£¬ÒªÇó¸ñÊ½»¯×Ö·û´®±ØĞëºÍÊ±¼ä×Ö·û´®Æ¥Åä£¬·ñÔòerr
-		½âÎöÊ±
-			³ıĞ¡ÊıÖ®Íâ£¬ÒªÇó¸ñÊ½Ò»ÖÂ
-			Ğ¡Êı
-				0£¬ÍêÈ«Ò»ÖÂ
-				9£¬¿ÉÒÔÆ¥ÅäÈÎÒâÎ»Ğ¡Êı
+	æ—¶é—´å­—ç¬¦ä¸²è§£æParse
+		æ—¥å¿—åˆ†æï¼Œæ—¥å¿—å°±æ˜¯æ–‡æœ¬æ–‡ä»¶
+		å­—ç¬¦ä¸²=>Timeå®ä¾‹
+		è§£ææ—¶ï¼Œè¦æ±‚æ ¼å¼åŒ–å­—ç¬¦ä¸²å¿…é¡»å’Œæ—¶é—´å­—ç¬¦ä¸²åŒ¹é…ï¼Œå¦åˆ™err
+		è§£ææ—¶
+			é™¤å°æ•°ä¹‹å¤–ï¼Œè¦æ±‚æ ¼å¼ä¸€è‡´
+			å°æ•°
+				0ï¼Œå®Œå…¨ä¸€è‡´
+				9ï¼Œå¯ä»¥åŒ¹é…ä»»æ„ä½å°æ•°
 
-	type Month int,ĞÂÀàĞÍ¿ÉÒÔÀ©Õ¹·½·¨
-		String()string,Stringer½Ó¿Ú
+	type Month int,æ–°ç±»å‹å¯ä»¥æ‰©å±•æ–¹æ³•
+		String()string,Stringeræ¥å£
 		int =>string,map
 
 	timestamp
-		UnixÊ±¼ä´Á(Ãë):1970Äê1ÔÂ1ÈÕ0µãÕûµ½ÏÖÔÚµÄÃëÊı(Ê±Çø£¬0)
-		Javascript Ï°¹ßÊ±¼ä´ÁÊÇms
-		tÊÇTimeÊµÀı£¬ÎÒÊÖÀïÓĞÏÖ³ÉµÄÊ±¼äÊµÀı
-			t.Unix()¡¢t.UnixMilli()£¬t.UnixMicro(),t.UnixNano() ÊµÀı.·½·¨()			
-			Unix()ÊÇ·½·¨£¬±íÊ¾Ê±¼äÊµÀıµ÷ÓÃ¸ÃÀàĞÍÀ©Õ¹³öÀ´µÄ·½·¨µÃµ½Ê±¼ä´ÁÕûÊı
-	¹¹½¨Ê±¼ä
-		Ê±¼ä×Ö·û´® parse Ê±¼ä¶ÔÏóTime£¬Äæ·½ÏòTime format => string
-		time.Now() => TimeÊµÀı
-		Ê±¼ä´Áint => TimeÊµÀı,ÎÒÊÖÀïÓĞÃ»ÓĞTimeÊµÀı?
+		Unixæ—¶é—´æˆ³(ç§’):1970å¹´1æœˆ1æ—¥0ç‚¹æ•´åˆ°ç°åœ¨çš„ç§’æ•°(æ—¶åŒºï¼Œ0)
+		Javascript ä¹ æƒ¯æ—¶é—´æˆ³æ˜¯ms
+		tæ˜¯Timeå®ä¾‹ï¼Œæˆ‘æ‰‹é‡Œæœ‰ç°æˆçš„æ—¶é—´å®ä¾‹
+			t.Unix()ã€t.UnixMilli()ï¼Œt.UnixMicro(),t.UnixNano() å®ä¾‹.æ–¹æ³•()			
+			Unix()æ˜¯æ–¹æ³•ï¼Œè¡¨ç¤ºæ—¶é—´å®ä¾‹è°ƒç”¨è¯¥ç±»å‹æ‰©å±•å‡ºæ¥çš„æ–¹æ³•å¾—åˆ°æ—¶é—´æˆ³æ•´æ•°
+	æ„å»ºæ—¶é—´
+		æ—¶é—´å­—ç¬¦ä¸² parse æ—¶é—´å¯¹è±¡Timeï¼Œé€†æ–¹å‘Time format => string
+		time.Now() => Timeå®ä¾‹
+		æ—¶é—´æˆ³int => Timeå®ä¾‹,æˆ‘æ‰‹é‡Œæœ‰æ²¡æœ‰Timeå®ä¾‹?
 			time.Unix(sec int64,nsec int64)
- Ê±¼äÔËËã
-		time + time Ã»ÓĞÒâÒå
-		time-time =>Ê±¼ä²îÀàĞÍ¶ÔÏó£¬Ê±¼äÔöÁ¿-²»ÄÜÓÃ£¬goÃ»ÓĞÌá¹© ÔËËã·ûÖØÔØ
+ æ—¶é—´è¿ç®—
+		time + time æ²¡æœ‰æ„ä¹‰
+		time-time =>æ—¶é—´å·®ç±»å‹å¯¹è±¡ï¼Œæ—¶é—´å¢é‡-ä¸èƒ½ç”¨ï¼Œgoæ²¡æœ‰æä¾› è¿ç®—ç¬¦é‡è½½
 		time t delta  => time
 I
 
@@ -52,34 +54,34 @@ func main() {
 	fmt.Printf("%T\n", t) //time.Time
 	fmt.Printf("%v: %+[1]v\n", t)
 	// 2024-06-26 11:16:27.4683718 +0800 CST m=+0.004229301: 2024-06-26 11:16:27.4683718 +0800 CST m=+0.004229301
-	//time.Time ÊµÏÖÁËGoString½Ó¿Ú
+	//time.Time å®ç°äº†GoStringæ¥å£
 	fmt.Printf("%#v\n", t)             //time.Date(2024, time.June, 26, 11, 15, 7, 912760200, time.Local)
 	fmt.Printf("%T, %[1]v\n", t.UTC()) //time.Time, 2024-06-26 03:15:07.9127602 +0000 UTC
 
-	//¡¾Ê±¼ä¸ñÊ½»¯¡¿
-	//ÈÕÆÚ¸ñÊ½»¯·û %y %Y %m %M %s Go¶¼²»ÓÃ
-	//1ÔÂ2ÈÕÏÂÎç3Ê±4·Ö5Ãë6Äê
+	//ã€æ—¶é—´æ ¼å¼åŒ–ã€‘
+	//æ—¥æœŸæ ¼å¼åŒ–ç¬¦ %y %Y %m %M %s Goéƒ½ä¸ç”¨
+	//1æœˆ2æ—¥ä¸‹åˆ3æ—¶4åˆ†5ç§’6å¹´
 	fmt.Println(t.Format("01*02*03*04*05*06 -0700"))    //06*26*11*21*13*24 +0800
 	fmt.Println(t.Format("2006/01/02/ 15:04:05 -0700")) //2024/06/26/ 11:24:49 +0800
 	fmt.Println(t.Format("2006/01/02/ 15:04:05"))       //2024/06/26/ 11:26:08
-	//Ğ¡Êı
+	//å°æ•°
 	fmt.Println(t.Format("2006/01/02/ 15:04:05.000000000 -0700")) //2024/06/26/ 11:31:00.632596400 +0800
 	fmt.Println(t.Format("2006/01/02/ 15:04:05.999999999 -0700")) //2024/06/26/ 11:31:00.6325964 +0800
 	fmt.Println(t.UTC().Format("0102 030405 06 pm"))              //0626 032819 24 am
 
-	//¡¾Ê±¼ä½âÎö·ÖÎö¡¿
+	//ã€æ—¶é—´è§£æåˆ†æã€‘
 	// s := "2019/06/28 06:27:00 +0800"
 	s := "2019/06/28 06:27:00.1234567 +0800"
 
 	// if t, err := time.Parse("2006/01/02 15:04:05 -0700", s); err == nil {
-	if t, err := time.Parse("2006/01/02 15:04:05.0000000 -0700", s); err == nil { //½âÎöĞ¡ÊıÒª¶ÔÆë
+	if t, err := time.Parse("2006/01/02 15:04:05.0000000 -0700", s); err == nil { //è§£æå°æ•°è¦å¯¹é½
 		fmt.Println(t) //2019-06-28 06:27:00 +0800 CST
 	} else {
 		fmt.Println(err)
 	}
 
-	//¡¾Ê±¼äÊôĞÔ¡¿
-	//È¡ÄêÔÂÈÕ Ò»ÄêµÚ¼¸Ìì¹ıÈ¥ÁË
+	//ã€æ—¶é—´å±æ€§ã€‘
+	//å–å¹´æœˆæ—¥ ä¸€å¹´ç¬¬å‡ å¤©è¿‡å»äº†
 	fmt.Println(t.Year(), t.Month(), t.Day(), int(t.Month()), t.Month().String(), t.YearDay())
 	//2024 June 26 6 June 178
 	fmt.Println(t.Hour(), t.Minute(), t.Second()) //11 47 55
@@ -87,24 +89,24 @@ func main() {
 	fmt.Println(t.Weekday(), int(t.Weekday()))    //Wednesday 3
 	fmt.Println(t.ISOWeek())                      //2024 26
 
-	//¡¾Ê±¼ä´Á¡¿ Ê¹ÓÃt.UnixMilli()À´×öÊ±¼ä´Á
+	//ã€æ—¶é—´æˆ³ã€‘ ä½¿ç”¨t.UnixMilli()æ¥åšæ—¶é—´æˆ³
 	fmt.Println(t.Unix(), t.UnixMilli(), t.UnixMicro(), t.UnixNano()) //1719373890 1719373890743 1719373890743447 1719373890743447300
 
-	//¡¾¡¿
-	ts := time.Unix(1698462248, 0)     //unix Ê±¼ä´Á
+	//ã€ã€‘
+	ts := time.Unix(1698462248, 0)     //unix æ—¶é—´æˆ³
 	fmt.Println("unix timestamp:", ts) //unix timestamp: 2023-10-28 11:04:08 +0800 CST
 	//Unix(sec int64, nsec int64) time.Time
 
-	//¡¾Ê±Çø¡¿
+	//ã€æ—¶åŒºã€‘
 	tt := "2019/06/28 06:27:00"
 	if tt, err := time.Parse("2006/01/02 15:04:05", tt); err == nil {
 		fmt.Println(tt.UTC())   //2019-06-27 22:27:00 +0000 UTC
 		fmt.Println(tt.Local()) //2019-06-28 14:27:00 +0800 CST
-		fmt.Println(tt)         //2019-06-28 06:27:00 +0000 UTC Ä¬ÈÏÏÔÊ¾0Ê±Çø
+		fmt.Println(tt)         //2019-06-28 06:27:00 +0000 UTC é»˜è®¤æ˜¾ç¤º0æ—¶åŒº
 	} else {
 		fmt.Println(err)
 	}
-	/*ËùÒÔÖ¸¶¨location¶¨ÒåÊ±¼ä*/
+	/*æ‰€ä»¥æŒ‡å®šlocationå®šä¹‰æ—¶é—´*/
 	tz, _ := time.LoadLocation("Asia/Shanghai")
 	if t, err := time.ParseInLocation(
 		"2006/01/02 15:04:05",
@@ -119,25 +121,25 @@ func main() {
 
 }
 
-// Õâ¸öÊ±¼ä´Á "2019-06-28 06:27:00 +0800 CST" ¿ÉÒÔ°´ÈçÏÂ·½Ê½Àí½â£º
+// è¿™ä¸ªæ—¶é—´æˆ³ "2019-06-28 06:27:00 +0800 CST" å¯ä»¥æŒ‰å¦‚ä¸‹æ–¹å¼ç†è§£ï¼š
 
-// "2019-06-28" ±íÊ¾ÈÕÆÚ²¿·Ö£¬¼´Äê·İ-ÔÂ·İ-ÈÕÆÚ¡£
-// "06:27:00" ±íÊ¾Ê±¼ä²¿·Ö£¬¼´Ê±-·Ö-Ãë¡£
-// "+0800" ±íÊ¾Ê±ÇøÆ«ÒÆÁ¿£¬¼´Ïà¶ÔÓÚ UTC Ê±¼äµÄÆ«ÒÆÁ¿¡£ÔÚÕâÖÖÇé¿öÏÂ£¬Æ«ÒÆÁ¿Îª +08:00£¬±íÊ¾Ïà¶ÔÓÚ UTC Ê±¼äÏò¶«Æ«ÒÆ 8 Ğ¡Ê±¡£
-// "CST" ±íÊ¾Ê±ÇøµÄËõĞ´£¬´ú±íÖĞ¹ú±ê×¼Ê±¼ä£¨China Standard Time£©£¬ËüÊÇ UTC+8 µÄÊ±Çø¡£
-// ×ÛºÏÆğÀ´£¬¸ÃÊ±¼ä´Á±íÊ¾µÄÊÇÖĞ¹ú±ê×¼Ê±¼ä£¨UTC+8£©ÏÂµÄ 2019 Äê 6 ÔÂ 28 ÈÕ 06:27:00 Ê±¿Ì¡£
+// "2019-06-28" è¡¨ç¤ºæ—¥æœŸéƒ¨åˆ†ï¼Œå³å¹´ä»½-æœˆä»½-æ—¥æœŸã€‚
+// "06:27:00" è¡¨ç¤ºæ—¶é—´éƒ¨åˆ†ï¼Œå³æ—¶-åˆ†-ç§’ã€‚
+// "+0800" è¡¨ç¤ºæ—¶åŒºåç§»é‡ï¼Œå³ç›¸å¯¹äº UTC æ—¶é—´çš„åç§»é‡ã€‚åœ¨è¿™ç§æƒ…å†µä¸‹ï¼Œåç§»é‡ä¸º +08:00ï¼Œè¡¨ç¤ºç›¸å¯¹äº UTC æ—¶é—´å‘ä¸œåç§» 8 å°æ—¶ã€‚
+// "CST" è¡¨ç¤ºæ—¶åŒºçš„ç¼©å†™ï¼Œä»£è¡¨ä¸­å›½æ ‡å‡†æ—¶é—´ï¼ˆChina Standard Timeï¼‰ï¼Œå®ƒæ˜¯ UTC+8 çš„æ—¶åŒºã€‚
+// ç»¼åˆèµ·æ¥ï¼Œè¯¥æ—¶é—´æˆ³è¡¨ç¤ºçš„æ˜¯ä¸­å›½æ ‡å‡†æ—¶é—´ï¼ˆUTC+8ï¼‰ä¸‹çš„ 2019 å¹´ 6 æœˆ 28 æ—¥ 06:27:00 æ—¶åˆ»ã€‚
 
-// Õâ¸öÊ±¼ä´Á "2019-06-27 22:27:00 +0000 UTC" ¿ÉÒÔ°´ÈçÏÂ·½Ê½Àí½â£º
+// è¿™ä¸ªæ—¶é—´æˆ³ "2019-06-27 22:27:00 +0000 UTC" å¯ä»¥æŒ‰å¦‚ä¸‹æ–¹å¼ç†è§£ï¼š
 
-// "2019-06-27" ±íÊ¾ÈÕÆÚ²¿·Ö£¬¼´Äê·İ-ÔÂ·İ-ÈÕÆÚ¡£
-// "22:27:00" ±íÊ¾Ê±¼ä²¿·Ö£¬¼´Ê±-·Ö-Ãë¡£
-// "+0000" ±íÊ¾Ê±ÇøÆ«ÒÆÁ¿£¬¼´Ïà¶ÔÓÚ UTC Ê±¼äµÄÆ«ÒÆÁ¿¡£ÔÚÕâÖÖÇé¿öÏÂ£¬Æ«ÒÆÁ¿Îª +00:00£¬±íÊ¾Óë UTC Ê±¼ä±£³ÖÒ»ÖÂ£¬Ã»ÓĞÊ±ÇøÆ«ÒÆ¡£
-// "UTC" ±íÊ¾Ğ­µ÷ÊÀ½çÊ±£¨Coordinated Universal Time£©£¬ËüÊÇÒ»¸ö±ê×¼µÄÈ«ÇòÊ±¼ä±ê×¼£¬Ïàµ±ÓÚÎÒÃÇÍ¨³£ËùËµµÄ¸ñÁÖÍşÖÎ±ê×¼Ê±¼ä£¨GMT£©¡£
-// ×ÛºÏÆğÀ´£¬¸ÃÊ±¼ä´Á±íÊ¾µÄÊÇĞ­µ÷ÊÀ½çÊ±£¨UTC£©ÏÂµÄ 2019 Äê 6 ÔÂ 27 ÈÕ 22:27:00 Ê±¿Ì£¬ÓÉÓÚÊ±ÇøÆ«ÒÆÁ¿Îª +00:00£¬Óë¸ñÁÖÍşÖÎ±ê×¼Ê±¼ä£¨GMT£©±£³ÖÒ»ÖÂ¡£
+// "2019-06-27" è¡¨ç¤ºæ—¥æœŸéƒ¨åˆ†ï¼Œå³å¹´ä»½-æœˆä»½-æ—¥æœŸã€‚
+// "22:27:00" è¡¨ç¤ºæ—¶é—´éƒ¨åˆ†ï¼Œå³æ—¶-åˆ†-ç§’ã€‚
+// "+0000" è¡¨ç¤ºæ—¶åŒºåç§»é‡ï¼Œå³ç›¸å¯¹äº UTC æ—¶é—´çš„åç§»é‡ã€‚åœ¨è¿™ç§æƒ…å†µä¸‹ï¼Œåç§»é‡ä¸º +00:00ï¼Œè¡¨ç¤ºä¸ UTC æ—¶é—´ä¿æŒä¸€è‡´ï¼Œæ²¡æœ‰æ—¶åŒºåç§»ã€‚
+// "UTC" è¡¨ç¤ºåè°ƒä¸–ç•Œæ—¶ï¼ˆCoordinated Universal Timeï¼‰ï¼Œå®ƒæ˜¯ä¸€ä¸ªæ ‡å‡†çš„å…¨çƒæ—¶é—´æ ‡å‡†ï¼Œç›¸å½“äºæˆ‘ä»¬é€šå¸¸æ‰€è¯´çš„æ ¼æ—å¨æ²»æ ‡å‡†æ—¶é—´ï¼ˆGMTï¼‰ã€‚
+// ç»¼åˆèµ·æ¥ï¼Œè¯¥æ—¶é—´æˆ³è¡¨ç¤ºçš„æ˜¯åè°ƒä¸–ç•Œæ—¶ï¼ˆUTCï¼‰ä¸‹çš„ 2019 å¹´ 6 æœˆ 27 æ—¥ 22:27:00 æ—¶åˆ»ï¼Œç”±äºæ—¶åŒºåç§»é‡ä¸º +00:00ï¼Œä¸æ ¼æ—å¨æ²»æ ‡å‡†æ—¶é—´ï¼ˆGMTï¼‰ä¿æŒä¸€è‡´ã€‚
 
 
 // A Month specifies a month of the year (January = 1, ...).
-type Month int //ĞÂÀàĞÍ¿ÉÒÔÀ©Õ¹·½·¨
+type Month int //æ–°ç±»å‹å¯ä»¥æ‰©å±•æ–¹æ³•
 
 const (
 	January Month = 1 + iota
@@ -163,7 +165,7 @@ import (
 )
 
 func main() {
-	//¡¾Ê±¼äÔËËã¡¿
+	//ã€æ—¶é—´è¿ç®—ã€‘
 	tz, _ := time.LoadLocation("Asia/Shanghai")
 	s1 := "2024/06/26 09:00:00"
 	s2 := "2024/06/26 10:00:00"
@@ -174,18 +176,18 @@ func main() {
 
 	fmt.Println(t2) //2024-06-26 10:00:00 +0800 CST
 
-	//Ê±¼ä²î
+	//æ—¶é—´å·®
 	delta := t2.Sub(t1)                           //t2-t1
 	fmt.Printf("delta: %v,%[1]T\n", delta)        //delta: 1h0m0s,time.Duration
-	fmt.Println(delta.Minutes(), delta.Seconds()) //60 3600	¹²²î¶àÉÙĞ¡Ê±ºÍÃë
+	fmt.Println(delta.Minutes(), delta.Seconds()) //60 3600	å…±å·®å¤šå°‘å°æ—¶å’Œç§’
 
-	//¹¹ÔìDuration
-	ns3 := time.Duration(3)              //3ÄÉÃë
-	s3 := time.Duration(3 * time.Second) //3Ãë
-	h3 := time.Duration(3 * time.Hour)   //3Ğ¡Ê±
+	//æ„é€ Duration
+	ns3 := time.Duration(3)              //3çº³ç§’
+	s3 := time.Duration(3 * time.Second) //3ç§’
+	h3 := time.Duration(3 * time.Hour)   //3å°æ—¶
 	fmt.Println(ns3, s3, h3)             //3ns 3s 3h0m0s
 
-	//Ê±¼äÆ«ÒÆ
+	//æ—¶é—´åç§»
 	t3 := t2.Add(h3)
 	fmt.Println("t3:", t3) //t3: 2024-06-26 13:00:00 +0800 CST
 	t4 := t2.Add(-h3)
@@ -193,94 +195,96 @@ func main() {
 	fmt.Println("t3.After:", t3.After(t4))     //t3.After: true
 	fmt.Println("time.Since:", time.Since(t2)) //time.Since: 3h44m47.1194582s
 
-	//Ê±¼ä´Á
+	//æ—¶é—´æˆ³
 	t := time.Unix(1, 0)
 	fmt.Printf("%T %+[1]v\n", t) //time.Time 1970-01-01 08:00:01 +0800 CST
 	fmt.Println(t.UTC())         //1970-01-01 00:00:01 +0000 UTC
 }
 
 
-¡¾11-2-°ü¹ÜÀí¡¿
+ã€11-2-åŒ…ç®¡ç†ã€‘
 =====================================================================
-[Ä£¿é»¯]
-°ü¹ÜÀí
-	Ê¹ÓÃÄ¿Â¼×éÖ¯°ü£¬Ä¿Â¼¾ÍÊÇ°ü
-		°üÀïÃæ£¬¿ÉÒÔÈô¸É.goÎÄ¼ş£¬.goÎÄ¼şÖĞĞ´package°üÃû
-	°üÃûĞ¡Ğ´£¬·ûºÏ±êÊ¶·û¶¨ÒåÒªÇó
-	³ımainÒÔÍâ£¬½¨Òé°üÃû¾ÍÊÇÄ¿Â¼Ãû£¬¿ÉÒÔ²»Ò»Ñù¡£²»Ò»ÑùµÄ»°£¬ÓÃÆğÀ´Âé·³
-	Í¬Ò»¸öÄ¿Â¼¾ÍÊÇÍ¬Ò»¸ö°ü
-		ÒªÇóËùÒÔ .goÎÄ¼ş±ØĞëÊ¹ÓÃÍ¬Ò»¸ö°üÃû
-		µ«xxx_test°üÃû³ıÍâ
+[æ¨¡å—åŒ–]
+åŒ…ç®¡ç†
+	ä½¿ç”¨ç›®å½•ç»„ç»‡åŒ…ï¼Œç›®å½•å°±æ˜¯åŒ…
+		åŒ…é‡Œé¢ï¼Œå¯ä»¥è‹¥å¹².goæ–‡ä»¶ï¼Œ.goæ–‡ä»¶ä¸­å†™packageåŒ…å
+	åŒ…åå°å†™ï¼Œç¬¦åˆæ ‡è¯†ç¬¦å®šä¹‰è¦æ±‚
+	é™¤mainä»¥å¤–ï¼Œå»ºè®®åŒ…åå°±æ˜¯ç›®å½•åï¼Œå¯ä»¥ä¸ä¸€æ ·ã€‚ä¸ä¸€æ ·çš„è¯ï¼Œç”¨èµ·æ¥éº»çƒ¦
+	åŒä¸€ä¸ªç›®å½•å°±æ˜¯åŒä¸€ä¸ªåŒ…
+		è¦æ±‚æ‰€ä»¥ .goæ–‡ä»¶å¿…é¡»ä½¿ç”¨åŒä¸€ä¸ªåŒ…å
+		ä½†xxx_teståŒ…åé™¤å¤–
 	
-	main°üÌØÊâ
-		mainº¯Êı±ØĞëÔÚmain°üÀï
-		¿ÉÖ´ĞĞÎÄ¼ş(windows .exe)ÀïÃæÓĞ¸ö±í£¬Èë¿Ú×Ö¶Î£¬-> mainº¯ÊıµØÖ·
+	mainåŒ…ç‰¹æ®Š
+		mainå‡½æ•°å¿…é¡»åœ¨mainåŒ…é‡Œ
+		å¯æ‰§è¡Œæ–‡ä»¶(windows .exe)é‡Œé¢æœ‰ä¸ªè¡¨ï¼Œå…¥å£å­—æ®µï¼Œ-> mainå‡½æ•°åœ°å€
 	
-	ÏîÄ¿¹ÜÀí
-		go modulesÄ£Ê½
-			go mod init test : test ±¾µØ°ü
-			go mod init magedu.com/wayne/test Ô¶³Ì²Ö¿âÏîÄ¿µØÖ·£¬ÍøÂç°ü
+	é¡¹ç›®ç®¡ç†
+		go modulesæ¨¡å¼
+			go mod init test : test æœ¬åœ°åŒ…
+			go mod init magedu.com/wayne/test è¿œç¨‹ä»“åº“é¡¹ç›®åœ°å€ï¼Œç½‘ç»œåŒ…
 			go get github.com/magedu/tools git
 			import "github.com/magedu/tools"
 			
-			go.modÎÄ¼ş ËùÓĞ°üÒÀÀµ¹ÜÀíÔÚÀïÃæ
-				module Ãû³Æ
-				go °æ±¾
-		 		Windows°æ±¾ C:\Users\BIRKHOFF ALW\go\pkg\mod
-		go mod vendor Ê¹ÓÃvendoring»úÖÆ£¬ÏîÄ¿¸ùÄ¿Â¼ÏÂÈç¹ûÓĞvendorÄ¿Â¼£¬ÓÅÏÈËÑË÷Õâ¸öÄ¿Â¼
+			go.modæ–‡ä»¶ æ‰€æœ‰åŒ…ä¾èµ–ç®¡ç†åœ¨é‡Œé¢
+				module åç§°
+				go ç‰ˆæœ¬
+		
+ 		Windowsç‰ˆæœ¬ C:\Users\BIRKHOFF ALW\go\pkg\mod
+		go mod vendor ä½¿ç”¨vendoringæœºåˆ¶ï¼Œé¡¹ç›®æ ¹ç›®å½•ä¸‹å¦‚æœæœ‰vendorç›®å½•ï¼Œä¼˜å…ˆæœç´¢è¿™ä¸ªç›®å½•
 		
 		
-		1.13°æ±¾Ö®ºóÄ¬ÈÏon set GO111MODULE=
+		1.13ç‰ˆæœ¬ä¹‹åé»˜è®¤on set GO111MODULE=
 
-GOPROXY»·¾³±äÁ¿¿ÉÒÔÖ¸¶¨°üÏÂÔØ¾µÏñ(¾µÏñµØÖ·ÓĞÊ±»á±ä»¯£¬Çë²ÎÕÕ¹Ù·½×îĞÂÎÄµµ)
+GOPROXYç¯å¢ƒå˜é‡å¯ä»¥æŒ‡å®šåŒ…ä¸‹è½½é•œåƒ(é•œåƒåœ°å€æœ‰æ—¶ä¼šå˜åŒ–ï¼Œè¯·å‚ç…§å®˜æ–¹æœ€æ–°æ–‡æ¡£)
 GOPROXY=https://goproxy.cn,direct
 GOPROXY=https://mirrors.aliyun.com/goproxy
 GOPROXY=https://mirrors.cloud.tencent.com/go/
 GOPROXY=https://repo.huaweicloud.com/repository/goproxy/
 
-	F5¹¤×÷ÓĞÔ­Àí£¿±³ºóÊ±±àÒë Go build Go run ÒòÎªÎÒÃÇ°´ÕÕGo¿ª·¢»·¾³(±ê×¼¿âGOROOT/src ¡¢ GoÃüÁîGOROOT/bin) 
-		ÄãĞ´µÄÔ´´úÂë¼ÓÉÏµ¼Èë±ğÈËµÄÔ´Âë(Ô´´úÂëºÏ²¢µ½ÄãµÄ´úÂëÖĞ) Ò»Æğ±àÒë
-	µ¼Èë·½Ê½
-			"github.com/vmihailenco/msgpack/v5" //¾ø¶Ôµ¼Èë
-			 m "test/calc" m±íÊ¾±ğÃûÒıÓÃ ±ğÃûµ¼Èë
-			 . "test/calc/minus" //.µ±Ç°minus°üÖĞµ¼³öµÄÈ«¾Ö±äÁ¿µ¼Èëµ½µ±Ç°°ü
-			 _ "test/calc/minus" //_Ã»ÓĞÃû×Ö minus°üÖĞµ¼³öµÄÈ«¾Ö±äÁ¿µ¼Èëµ½µ±Ç°ºÚ¶´£¬Ò²ÊÇËùÓĞµ¼³öÎŞ·¨Ê¹ÓÃ£¬ÒªËü¸ÉÂï£¿	
-			 										// ÄäÃûµ¼Èë£¬¾ÍÊÇÎªÁËinit()Ã»·¨Ê¹ÓÃ×ÊÔ´,
+	F5å·¥ä½œæœ‰åŸç†ï¼ŸèƒŒåæ—¶ç¼–è¯‘ Go build Go run å› ä¸ºæˆ‘ä»¬æŒ‰ç…§Goå¼€å‘ç¯å¢ƒ(æ ‡å‡†åº“GOROOT/src ã€ Goå‘½ä»¤GOROOT/bin) 
+		ä½ å†™çš„æºä»£ç åŠ ä¸Šå¯¼å…¥åˆ«äººçš„æºç (æºä»£ç åˆå¹¶åˆ°ä½ çš„ä»£ç ä¸­) ä¸€èµ·ç¼–è¯‘
+	å¯¼å…¥æ–¹å¼
+			"github.com/vmihailenco/msgpack/v5" //ç»å¯¹å¯¼å…¥
+			 m "test/calc" mè¡¨ç¤ºåˆ«åå¼•ç”¨ åˆ«åå¯¼å…¥
+			 . "test/calc/minus" //.å½“å‰minusåŒ…ä¸­å¯¼å‡ºçš„å…¨å±€å˜é‡å¯¼å…¥åˆ°å½“å‰åŒ…
+			 _ "test/calc/minus" //_æ²¡æœ‰åå­— minusåŒ…ä¸­å¯¼å‡ºçš„å…¨å±€å˜é‡å¯¼å…¥åˆ°å½“å‰é»‘æ´ï¼Œä¹Ÿæ˜¯æ‰€æœ‰å¯¼å‡ºæ— æ³•ä½¿ç”¨ï¼Œè¦å®ƒå¹²å˜›ï¼Ÿ	
+			 										//
+ åŒ¿åå¯¼å…¥ï¼Œå°±æ˜¯ä¸ºäº†init()æ²¡æ³•ä½¿ç”¨èµ„æº,
 
-	init()º¯Êı
-		¿ÉÒÔĞ´ÔÚÈÎºÎ.goÎÄ¼şÖĞ
-		ÎŞ²Î¡¢ÎŞ·µ»ØÖµ
-		Ò»°ãÒ»¸ögoÎÄ¼şÖĞÖ»Ğ´Ò»¸ö£¬¿ÉÒÔĞ´¶à¸ö
-		²»Í¬µÄgoÎÄ¼şÖĞ¶¼¿ÉÒÔĞ´
+	init()å‡½æ•°
+		å¯ä»¥å†™åœ¨ä»»ä½•.goæ–‡ä»¶ä¸­
+		æ— å‚ã€æ— è¿”å›å€¼
+		ä¸€èˆ¬ä¸€ä¸ªgoæ–‡ä»¶ä¸­åªå†™ä¸€ä¸ªï¼Œå¯ä»¥å†™å¤šä¸ª
+		ä¸åŒçš„goæ–‡ä»¶ä¸­éƒ½å¯ä»¥å†™
 		
-		¾ø¶Ôµ¼Èë¡¢±ğÃûµ¼Èë¶¼¿ÉÒÔÖ¸Ïòinit
-		µ¼Èë¶¼¿ÉÒÔÖ´ĞĞinit(),°üÀ¨ÄäÃûµ¼Èë
+		ç»å¯¹å¯¼å…¥ã€åˆ«åå¯¼å…¥éƒ½å¯ä»¥æŒ‡å‘init
+		å¯¼å…¥éƒ½å¯ä»¥æ‰§è¡Œinit(),åŒ…æ‹¬åŒ¿åå¯¼å…¥
 		
-		Ó¦ÓÃ£ºÇı¶¯³ÌĞò£¬Çı¶¯³ÌĞò°üÄã×Ô¼ºÊ¹ÓÃÄäÃûµ¼Èë£¬init()±»Ö´ĞĞ
+		åº”ç”¨ï¼šé©±åŠ¨ç¨‹åºï¼Œé©±åŠ¨ç¨‹åºåŒ…ä½ è‡ªå·±ä½¿ç”¨åŒ¿åå¯¼å…¥ï¼Œinit()è¢«æ‰§è¡Œ
 		
-		initº¯Êı£¬ÎŞ²ÎÎŞ·µ»ØÖµ£¬²»ÄÜ±»ÆäËûº¯Êıµ÷ÓÃ
-		°üÖĞµÄinitº¯Êı½«ÔÚmainº¯ÊıÖ®Ç°×Ô¶¯Ö´ĞĞ
-		Ã¿¸ö°üÖĞinitº¯Êı¿ÉÒÔÓĞ¶à¸ö£¬ÇÒ¿ÉÒÔÎ»ÓÚ²»Í¬µÄÎÄ¼şÖĞ
-		Í¬Ò»¸öÎÄ¼şÖĞ¿ÉÒÔÓĞ¶à¸öinitº¯Êı£¬µ«Ò»°ãÒ»¸ö¾Í¹»ÁË£¬²»½¨ÒéĞ´¶à¸ö
-		Í¬Ò»¸ö°üÖĞµÄinitº¯ÊıÃ»ÓĞÃ÷È·µÄÖ´ĞĞË³Ğò£¬²»¿ÉÔ¤ÆÚ
-		²»Í¬°üµÄinitº¯ÊıµÄÖ´ĞĞË³ĞòÓÉµ¼ÈëË³Ğò¾ö¶¨
+		initå‡½æ•°ï¼Œæ— å‚æ— è¿”å›å€¼ï¼Œä¸èƒ½è¢«å…¶ä»–å‡½æ•°è°ƒç”¨
+		åŒ…ä¸­çš„initå‡½æ•°å°†åœ¨mainå‡½æ•°ä¹‹å‰è‡ªåŠ¨æ‰§è¡Œ
+		æ¯ä¸ªåŒ…ä¸­initå‡½æ•°å¯ä»¥æœ‰å¤šä¸ªï¼Œä¸”å¯ä»¥ä½äºä¸åŒçš„æ–‡ä»¶ä¸­
+		åŒä¸€ä¸ªæ–‡ä»¶ä¸­å¯ä»¥æœ‰å¤šä¸ªinitå‡½æ•°ï¼Œä½†ä¸€èˆ¬ä¸€ä¸ªå°±å¤Ÿäº†ï¼Œä¸å»ºè®®å†™å¤šä¸ª
+		åŒä¸€ä¸ªåŒ…ä¸­çš„initå‡½æ•°æ²¡æœ‰æ˜ç¡®çš„æ‰§è¡Œé¡ºåºï¼Œä¸å¯é¢„æœŸ
+		ä¸åŒåŒ…çš„initå‡½æ•°çš„æ‰§è¡Œé¡ºåºç”±å¯¼å…¥é¡ºåºå†³å®š
 		
-		initº¯ÊıÖ÷ÒªÊÇ×öÒ»Ğ©³õÊ¼»¯¹¤×÷¡£initºÍmainº¯Êı²»Ò»¶¨ÔÚÍ¬Ò»¸öÎÄ¼şÖĞ¡£
-		import _ "xxx"×÷ÓÃÊÇÊ²Ã´?Ö»Ö´ĞĞ¸Ã°üµÄinitº¯Êı£¬ÎŞ·¨Ê¹ÓÃ°üÄÚ×ÊÔ´¡£
-		import "xxx"×÷ÓÃÊÇÊ²Ã´?Ò²»áÖ´ĞĞ¸Ã°üµÄinitº¯Êı£¬Ò²¿ÉÒÔÊ¹ÓÃ°üÄÚ×ÊÔ´.¡£
+		initå‡½æ•°ä¸»è¦æ˜¯åšä¸€äº›åˆå§‹åŒ–å·¥ä½œã€‚initå’Œmainå‡½æ•°ä¸ä¸€å®šåœ¨åŒä¸€ä¸ªæ–‡ä»¶ä¸­ã€‚
+		import _ "xxx"ä½œç”¨æ˜¯ä»€ä¹ˆ?åªæ‰§è¡Œè¯¥åŒ…çš„initå‡½æ•°ï¼Œæ— æ³•ä½¿ç”¨åŒ…å†…èµ„æºã€‚
+		import "xxx"ä½œç”¨æ˜¯ä»€ä¹ˆ?ä¹Ÿä¼šæ‰§è¡Œè¯¥åŒ…çš„initå‡½æ•°ï¼Œä¹Ÿå¯ä»¥ä½¿ç”¨åŒ…å†…èµ„æº.ã€‚
 		
 		
-[×Ó°ü]
-¡¶main.go¡·
+[å­åŒ…]
+ã€Šmain.goã€‹
 package main
 
 import (
 	"fmt"
 	"test/calc"
-	// "github.com/vmihailenco/msgpack/v5" //¾ø¶Ôµ¼Èë
-	// m "test/calc" m±íÊ¾±ğÃûÒıÓÃ ±ğÃûµ¼Èë
-	// . "test/calc/minus" .µ±Ç°minus°üÖĞµ¼³öµÄÈ«¾Ö±äÁ¿µ¼Èëµ½µ±Ç°°ü
-	// _ "test/calc/minus" _Ã»ÓĞÃû×Ö minus°üÖĞµ¼³öµÄÈ«¾Ö±äÁ¿µ¼Èëµ½µ±Ç°ºÚ¶´£¬Ò²ÊÇËùÓĞµ¼³öÎŞ·¨Ê¹ÓÃ£¬ÒªËü¸ÉÂï£¿
+	// "github.com/vmihailenco/msgpack/v5" //ç»å¯¹å¯¼å…¥
+	// m "test/calc" mè¡¨ç¤ºåˆ«åå¼•ç”¨ åˆ«åå¯¼å…¥
+	// . "test/calc/minus" .å½“å‰minusåŒ…ä¸­å¯¼å‡ºçš„å…¨å±€å˜é‡å¯¼å…¥åˆ°å½“å‰åŒ…
+	// _ "test/calc/minus" _æ²¡æœ‰åå­— minusåŒ…ä¸­å¯¼å‡ºçš„å…¨å±€å˜é‡å¯¼å…¥åˆ°å½“å‰é»‘æ´ï¼Œä¹Ÿæ˜¯æ‰€æœ‰å¯¼å‡ºæ— æ³•ä½¿ç”¨ï¼Œè¦å®ƒå¹²å˜›ï¼Ÿ
 )
 
 func main() {
@@ -300,7 +304,7 @@ func main() {
 // calc.go [1] init
 // calc.go [2] init
 
-¡¶calc/add.go¡·
+ã€Šcalc/add.goã€‹
 package calc
 
 import "fmt"
@@ -318,7 +322,7 @@ func init() {
 	fmt.Println("add.go [2] init")
 }
 
-¡¶calc/calc.go¡·
+ã€Šcalc/calc.goã€‹
 package calc
 
 import "fmt"
@@ -337,50 +341,50 @@ func init() {
 }
 
 [replace]
-ÓÃÓÚ½«Ò»¸öÄ£¿é°æ±¾Ìæ»»ÎªÁíÍâÒ»¸öÄ£¿é°æ±¾
+ç”¨äºå°†ä¸€ä¸ªæ¨¡å—ç‰ˆæœ¬æ›¿æ¢ä¸ºå¦å¤–ä¸€ä¸ªæ¨¡å—ç‰ˆæœ¬
 
 
-¡¾11-3-log°ü¡¿
+ã€11-3-logåŒ…ã€‘
 =====================================================================
-±ê×¼¿â1og
-	ÈÕÖ¾¿âÖ®ËùÒÔÄÜ¹»Êä³ö£¬Ô­ÒòÄÚ²¿¶¼»á¹¹½¨Ò»¸öLoggerÈÕÖ¾¼ÇÂ¼Æ÷
-	È±Ê¡ÈÕÖ¾¼ÇÂ¼Æ÷
-		var std = New(os.stderr,""£¬LstdFlags) => *Logger
-			1Êä³öoutputSetoutput
+æ ‡å‡†åº“1og
+	æ—¥å¿—åº“ä¹‹æ‰€ä»¥èƒ½å¤Ÿè¾“å‡ºï¼ŒåŸå› å†…éƒ¨éƒ½ä¼šæ„å»ºä¸€ä¸ªLoggeræ—¥å¿—è®°å½•å™¨
+	ç¼ºçœæ—¥å¿—è®°å½•å™¨
+		var std = New(os.stderr,""ï¼ŒLstdFlags) => *Logger
+			1è¾“å‡ºoutputSetoutput
 			2 prefix
-			3 flagsÅäÖÃ±ê¼Ç£¬¸÷ÖÖ±ê¼ÇÌá¹©Ò»Ğ©ÄÜÁ¦
-	func Default()*Logger { return std }// log.Default()->std *Logger Ö»¶Ágetter
-	Èı¸ö¿ì½İ·½·¨
+			3 flagsé…ç½®æ ‡è®°ï¼Œå„ç§æ ‡è®°æä¾›ä¸€äº›èƒ½åŠ›
+	func Default()*Logger { return std }// log.Default()->std *Logger åªè¯»getter
+	ä¸‰ä¸ªå¿«æ·æ–¹æ³•
 		log.Print * 0
-		log.Fatal* log.Print* + os.Exit(1) Ö®ºó´úÂë²»ÔÙÖ´ĞĞ
+		log.Fatal* log.Print* + os.Exit(1) ä¹‹åä»£ç ä¸å†æ‰§è¡Œ
 		log.Panic* log.Print* + panic 2
 
-	LoggerÀàĞÍ
-		Print*¡¢Fatal*¡¢Panic*
-	ÈÕÖ¾ÎÄ¼şÊä³ö
-		Ö»Ğ´writeonly
+	Loggerç±»å‹
+		Print*ã€Fatal*ã€Panic*
+	æ—¥å¿—æ–‡ä»¶è¾“å‡º
+		åªå†™writeonly
 		os.0penFile(name string, flag int, perm os.FileMode)
-			name ÎÄ¼şÂ·¾¶
-			flag¿ØÖÆÈçºÎ´ò¿ªÖ»¶Á¡¢Ö»Ğ´¡¢ÎÄ¼ş²»ÔÚ´´½¨¡¢ÎÄ¼şÔÚ±¨´í¡¢×·¼ÓĞ´Èë¡¢ÎÄ¼şÓĞÄÚÈİÇå¿Õ
-			ÒÆÎ»´´½¨µÄflag£¬¿ÉÒÔ×éºÏÊ¹ÓÃ
-			os.O_CREATEÎÄ¼ş²»´æÔÚĞÂ½¨£¬´æÔÚ²»¹Ü
-			oS.O_WRONLY ÎÄ¼ş¿ÉĞ´writableÅäºÏ½Ó¿Ú·½·¨write·½·¨
-			oS.O_APPEND×·¼Ó
-	ÈÕÖ¾·ÖÎö
-		Ö»¶Á
+			name æ–‡ä»¶è·¯å¾„
+			flagæ§åˆ¶å¦‚ä½•æ‰“å¼€åªè¯»ã€åªå†™ã€æ–‡ä»¶ä¸åœ¨åˆ›å»ºã€æ–‡ä»¶åœ¨æŠ¥é”™ã€è¿½åŠ å†™å…¥ã€æ–‡ä»¶æœ‰å†…å®¹æ¸…ç©º
+			ç§»ä½åˆ›å»ºçš„flagï¼Œå¯ä»¥ç»„åˆä½¿ç”¨
+			os.O_CREATEæ–‡ä»¶ä¸å­˜åœ¨æ–°å»ºï¼Œå­˜åœ¨ä¸ç®¡
+			oS.O_WRONLY æ–‡ä»¶å¯å†™writableé…åˆæ¥å£æ–¹æ³•writeæ–¹æ³•
+			oS.O_APPENDè¿½åŠ 
+	æ—¥å¿—åˆ†æ
+		åªè¯»
 		os.Open(name string)
-	zerolog ±È½Ï¼òµ¥
-		Ò»°ã¶¼ĞèÒª¼¶±ğ
+	zerolog æ¯”è¾ƒç®€å•
+		ä¸€èˆ¬éƒ½éœ€è¦çº§åˆ«
 		
 
 
-[±ê×¼¿â]
-// Ê¹ÓÃÈ±Ê¡Logger
+[æ ‡å‡†åº“]
+// ä½¿ç”¨ç¼ºçœLogger
 log.Print("abcde\n")
 log.Printf("%s\n","abcd")
 log.Printin("abc")
-log.Fatal("xyz")// µÈ¼ÛÓÚ 1og.Print(¡°xyz");os.Exit(1)
-logg.Panicln("Failed") // µÈ¼ÛÓÚ log.Println("Failed");panic()
+log.Fatal("xyz")// ç­‰ä»·äº 1og.Print(â€œxyz");os.Exit(1)
+logg.Panicln("Failed") // ç­‰ä»·äº log.Println("Failed");panic()
 
 
 package main
@@ -395,24 +399,24 @@ func main() {
 		err := recover()
 		fmt.Println("err:", err)
 	}() // reutnr or panic
-	log.Println("abc") //¼ÇÂ¼ÈÕÖ¾ ÍË³ö×´Ì¬ÂëÎª0 status 0
+	log.Println("abc") //è®°å½•æ—¥å¿— é€€å‡ºçŠ¶æ€ç ä¸º0 status 0
 	fmt.Println("abc~~~")
 	fmt.Println("~~~~~~~~~~~~~~~~~~")
-	log.Fatalf("Fatal Code: %v \n", "aabbcc") //2024/06/28 10:46:04 Fatal Code: aabbcc  ÍË³ö×´Ì¬ÂëÎª1 Ö®ºó´úÂë²»ÔÙÖ´ĞĞ
-	//Fatal Ö±½Ó os.Exit(1)
+	log.Fatalf("Fatal Code: %v \n", "aabbcc") //2024/06/28 10:46:04 Fatal Code: aabbcc  é€€å‡ºçŠ¶æ€ç ä¸º1 ä¹‹åä»£ç ä¸å†æ‰§è¡Œ
+	//Fatal ç›´æ¥ os.Exit(1)
 	fmt.Println("~~~~~~~~~~~~~~~~~~")
-	log.Panicf("Panic: %v \n", "paninc information") //panic ·µ»Ø×´Ì¬ÂëÎªstatus 2
+	log.Panicf("Panic: %v \n", "paninc information") //panic è¿”å›çŠ¶æ€ç ä¸ºstatus 2
 	fmt.Println("~~~~~~~~~~~~~~~~~~")
 
 	log.Default() //func Default() *Logger { return std } => std *Logger
 
 }
 
-	log.Default().SetOutput(os.Stdout) //ÄÚ²¿µÄstd ¡¢ÈÎºÎLogger¶¼¿ÉÒÔ¸Ä
+	log.Default().SetOutput(os.Stdout) //å†…éƒ¨çš„std ã€ä»»ä½•Loggeréƒ½å¯ä»¥æ”¹
 	log.Println("###abc###")           //2024/06/28 14:10:34 ###abc###
 	
-[×Ô¶¨ÒåLogger]
-Èç¹û¾õµÃÈ±Ê¡Logger std²»ÂúÒâ£¬¿ÉÒÔNew¹¹½¨Ò»¸ö×Ô¶¨ÒåLogger²¢Ö¸¶¨Ç°×º¡¢Flags¡£
+[è‡ªå®šä¹‰Logger]
+å¦‚æœè§‰å¾—ç¼ºçœLogger stdä¸æ»¡æ„ï¼Œå¯ä»¥Newæ„å»ºä¸€ä¸ªè‡ªå®šä¹‰Loggerå¹¶æŒ‡å®šå‰ç¼€ã€Flagsã€‚
 
 package main
 
@@ -422,7 +426,7 @@ import (
 )
 
 func main() {
-	/*×Ô¶¨ÒåLogger*/
+	/*è‡ªå®šä¹‰Logger*/
 
 	// log.New()
 	// func log.New(out io.Writer, prefix string, flag int) *log.Logger
@@ -431,15 +435,15 @@ func main() {
 	// 	Write(p []byte) (n int, err error)
 	// }
 	infologger := log.New(os.Stdout, "Info: ", log.LstdFlags)
-	infologger.Println("ÕâÊÇÒ»¸öÆÕÍ¨ÏûÏ¢1") //Info: 2024/06/28 14:18:43 ÕâÊÇÒ»¸öÆÕÍ¨ÏûÏ¢1
+	infologger.Println("è¿™æ˜¯ä¸€ä¸ªæ™®é€šæ¶ˆæ¯1") //Info: 2024/06/28 14:18:43 è¿™æ˜¯ä¸€ä¸ªæ™®é€šæ¶ˆæ¯1
 
-	////°Ñ×Ô¶¨ÒåµÄ·ÅºóÃæ
+	////æŠŠè‡ªå®šä¹‰çš„æ”¾åé¢
 	infologger = log.New(os.Stdout, "Info: ", log.LstdFlags|log.Lmsgprefix)
-	infologger.Println("ÕâÊÇÒ»¸öÆÕÍ¨ÏûÏ¢2") //2024/06/28 14:20:00 Info: ÕâÊÇÒ»¸öÆÕÍ¨ÏûÏ¢
+	infologger.Println("è¿™æ˜¯ä¸€ä¸ªæ™®é€šæ¶ˆæ¯2") //2024/06/28 14:20:00 Info: è¿™æ˜¯ä¸€ä¸ªæ™®é€šæ¶ˆæ¯
 }
 
-[Ğ´ÈÕÖ¾ÎÄ¼ş]
-New·½·¨Ç©Ãû New(out io.writer£¬prefix string£¬flag int)*Logger ÖĞout²ÎÊıÌá¹©Writer½Ó¿Ú¼´¿É£¬ÄÇÃ´¾Í¿ÉÒÔÌá¹©Ò»¸ö¿ÉĞ´ÎÄ¼ş¶ÔÏó¡£
+[å†™æ—¥å¿—æ–‡ä»¶]
+Newæ–¹æ³•ç­¾å New(out io.writerï¼Œprefix stringï¼Œflag int)*Logger ä¸­outå‚æ•°æä¾›Writeræ¥å£å³å¯ï¼Œé‚£ä¹ˆå°±å¯ä»¥æä¾›ä¸€ä¸ªå¯å†™æ–‡ä»¶å¯¹è±¡ã€‚
 
 package main
 
@@ -451,20 +455,20 @@ import (
 func main() {
 	f, err := os.OpenFile(
 		"D:/my_nginx.log",
-		os.O_WRONLY|os.O_CREATE|os.O_APPEND, //Ö»Ğ´¡¢ÎÄ¼ş²»´æÔÚ´´½¨¡¢×·¼Ó
-		os.ModePerm,                         //Unix permission bits£¬0o777
-	) //¶ÁĞ´ ·µ»ØÒ»¸öÎÄ¼şÖ¸Õë(¾ä±ú)
+		os.O_WRONLY|os.O_CREATE|os.O_APPEND, //åªå†™ã€æ–‡ä»¶ä¸å­˜åœ¨åˆ›å»ºã€è¿½åŠ 
+		os.ModePerm,                         //Unix permission bitsï¼Œ0o777
+	) //è¯»å†™ è¿”å›ä¸€ä¸ªæ–‡ä»¶æŒ‡é’ˆ(å¥æŸ„)
 	if err != nil {
 		log.Panicln(err)
 	}
 
-	defer f.Close() //²»ÒªÓÃ¹Ø±Õ
+	defer f.Close() //ä¸è¦ç”¨å…³é—­
 	l := log.New(f, "BIRKHOFF Logger", log.LstdFlags)
-	l.Println("ÕâÊÇÒ»¸ö¶ÁĞ´ÎÄ¼şµÄÏûÏ¢ Logger Title")
+	l.Println("è¿™æ˜¯ä¸€ä¸ªè¯»å†™æ–‡ä»¶çš„æ¶ˆæ¯ Logger Title")
 }
 
 
-¡¾11-4-zerolog¡¿
+ã€11-4-zerologã€‘
 =====================================================================
 go get -u github.com/rs/zerolog/log
 go: downloading github.com/rs/zerolog v1.33.0
@@ -477,8 +481,8 @@ go: added github.com/rs/zerolog v1.33.0
 go: added golang.org/x/sys v0.21.0
 
 
-¼¶±ğ
-	ÏûÏ¢µÄ¼¶±ğ
+çº§åˆ«
+	æ¶ˆæ¯çš„çº§åˆ«
 		{"level":"warn","time":"2024-06-28T16:27:24+08:00","message":"Warn CPU HIGH"}
 		{"level":"error","time":"2024-06-28T16:27:24+08:00","message":"Error run too many times"}
 
@@ -503,29 +507,29 @@ const (
 
 
 zerolog
-	¼¶±ğ
-		ÏûÏ¢µÄ¼¶±ğ
-			logger.Warn()¡¢logger.Debug()
-		loggerµÄ¼¶±ğ£¬NewÉú³ÉµÄLoggerÄ¬ÈÏ¼¶±ğÊÇtrace -1
+	çº§åˆ«
+		æ¶ˆæ¯çš„çº§åˆ«
+			logger.Warn()ã€logger.Debug()
+		loggerçš„çº§åˆ«ï¼ŒNewç”Ÿæˆçš„Loggeré»˜è®¤çº§åˆ«æ˜¯trace -1
 			logger.Level(?) => new child logger
 			log.New() => default level trace -l
 		gLevel -l trace
 			SetGlobalLevel(?)
 
-		ÏûÏ¢Êä³öÌõ¼ş:ÏûÏ¢¼¶±ğ >= Max(gLevel£¬logger.Level)
+		æ¶ˆæ¯è¾“å‡ºæ¡ä»¶:æ¶ˆæ¯çº§åˆ« >= Max(gLevelï¼Œlogger.Level)
 	
-	zerolog/log 1og.Xxx()¿ì½İ·½·¨
+	zerolog/log 1og.Xxx()å¿«æ·æ–¹æ³•
 		log.Warn().Msg("warn string")
-		Ò»Ìõ¼ÇÂ¼ level":"warn","time":"2023-10-28T18:07:17+08:00","message":"warn string"
-		Warn()=>"level":"warn"ÏûÏ¢µÄ¼¶±ğ
+		ä¸€æ¡è®°å½• level":"warn","time":"2023-10-28T18:07:17+08:00","message":"warn string"
+		Warn()=>"level":"warn"æ¶ˆæ¯çš„çº§åˆ«
 		Msg("warn string") => "message":"warn string"
-		time×Ö¶ÎÒ»¶¨ÒªÓĞ
+		timeå­—æ®µä¸€å®šè¦æœ‰
 	
-	var Logger = zerolog.New(os.stderr).with().Timestamp().Logger()°üÍâ¿ÉÓÃ£¬È«¾ÖÈ±Ê¡
+	var Logger = zerolog.New(os.stderr).with().Timestamp().Logger()åŒ…å¤–å¯ç”¨ï¼Œå…¨å±€ç¼ºçœ
 		log.Logger
 		logger.Warn()
-		logger.Debug()²úÉúÏûÏ¢¼¶±ğ
-		logger.Level(zerolog.XxxxLevel) ÉèÖÃLogger¼¶±ğ
+		logger.Debug()äº§ç”Ÿæ¶ˆæ¯çº§åˆ«
+		logger.Level(zerolog.XxxxLevel) è®¾ç½®Loggerçº§åˆ«
 
 package main
 
@@ -540,15 +544,15 @@ import (
 
 func main() {
 
-	/*È«¾ÖLevel trace*/
+	/*å…¨å±€Level trace*/
 	fmt.Println(zerolog.GlobalLevel(), "####") //trace ####
-	//ÉèÖÃÈ«¾ÖLevel
-	// zerolog.SetGlobalLevel(zerolog.WarnLevel) //Èç¹ûÉèÖÃÁËwarningÏÂÃæµÄµÍÓÚÕâ¸ö¾¯¸æÎŞ·¨ÏÔÊ¾
+	//è®¾ç½®å…¨å±€Level
+	// zerolog.SetGlobalLevel(zerolog.WarnLevel) //å¦‚æœè®¾ç½®äº†warningä¸‹é¢çš„ä½äºè¿™ä¸ªè­¦å‘Šæ— æ³•æ˜¾ç¤º
 	zerolog.SetGlobalLevel(zerolog.InfoLevel)
 	fmt.Println(zerolog.GlobalLevel(), "####") //Info ####
 
 	/*log.Logger default logger*/
-	//zerologÊä³ö¸ñÊ½debug¼¶±ğ
+	//zerologè¾“å‡ºæ ¼å¼debugçº§åˆ«
 	log.Print("Kramer Lamer")
 	// {"level":"debug","time":"2024-06-28T16:27:24+08:00","message":"Kramer Lamer"}
 	log.Debug().Msg("Debug Kramer Lamer")
@@ -559,7 +563,7 @@ func main() {
 	// {"level":"warn","time":"2024-06-28T16:27:24+08:00","message":"Warn CPU HIGH"}
 	log.Error().Msg("Error run too many times")
 	// {"level":"error","time":"2024-06-28T16:27:24+08:00","message":"Error run too many times"}
-	fmt.Println(log.Logger.GetLevel()) //Ä¬ÈÏÊÇ£ºtrace -1
+	fmt.Println(log.Logger.GetLevel()) //é»˜è®¤æ˜¯ï¼štrace -1
 	fmt.Println("------------------------------")
 
 	// mylog := zerolog.New(os.Stdout)
@@ -573,13 +577,13 @@ func main() {
 	mylog := zerolog.New(os.Stdout).With().Timestamp().Logger().Level(zerolog.WarnLevel)
 	mylog.Info().Msg("mylog info")
 	mylog.Warn().Msg("mylog warning")
-	//ÒòÎªÉèÖÃÁË¼¶±ğÎªWarning ËùÒÔ±ÈËüµÍ¼¶±ğµÄ²»Êä³öÁË
+	//å› ä¸ºè®¾ç½®äº†çº§åˆ«ä¸ºWarning æ‰€ä»¥æ¯”å®ƒä½çº§åˆ«çš„ä¸è¾“å‡ºäº†
 	// {"level":"warn","time":"2024-06-28T16:43:24+08:00","message":"mylog warning"}
-	fmt.Println(mylog.GetLevel()) //Ä¬ÈÏÊÇ£ºwarn
+	fmt.Println(mylog.GetLevel()) //é»˜è®¤æ˜¯ï¼šwarn
 	fmt.Println("------------------------------")
 
-	/*ÉèÖÃLevel*/
-	log1 := log.Level(zerolog.ErrorLevel) //ÒòÎªÉèÖÃÁËError¼¶±ğ ËùÒÔÏÂÃæ¶¼²»Êä³ö
+	/*è®¾ç½®Level*/
+	log1 := log.Level(zerolog.ErrorLevel) //å› ä¸ºè®¾ç½®äº†Errorçº§åˆ« æ‰€ä»¥ä¸‹é¢éƒ½ä¸è¾“å‡º
 	fmt.Println(log1.GetLevel())          //error
 	log1.Info().Msg("log1 Info msg")
 	log1.Warn().Msg("log1 Warn msg")
@@ -587,9 +591,9 @@ func main() {
 }
 
 		
-	Ôö¼Ó×Ö¶Î
-		¶¨ÒåLoggerÊ±£¬With =>Context .Logger() => Logger  	
-		Ê¹ÓÃLoggerÊ±£¬mylog.Warn().Msg("warn infomation")
+	å¢åŠ å­—æ®µ
+		å®šä¹‰Loggeræ—¶ï¼ŒWith =>Context .Logger() => Logger  	
+		ä½¿ç”¨Loggeræ—¶ï¼Œmylog.Warn().Msg("warn infomation")
 		
 package main
 
@@ -603,7 +607,7 @@ import (
 
 func main() {
 	zerolog.SetGlobalLevel(zerolog.WarnLevel)
-	/*ÉèÖÃÄ¬ÈÏ¸ñÊ½*/
+	/*è®¾ç½®é»˜è®¤æ ¼å¼*/
 	// zerolog.TimeFieldFormat =
 
 	zerolog.TimeFieldFormat = "2006"
@@ -621,19 +625,19 @@ func main() {
 	// log1 := log.Level(zerolog.ErrorLevel)
 	// log1.Error().Bool("test", false).Str("name", "Tom").Floats32("scores", []float32{60.6, 2, 4}).Msg("log1 Error msg")
 	//{"level":"error","test":false,"name":"Tom","scores":[60.6,2,4],"time":"2024-06-28T18:28:48+08:00","message":"log1 Error msg"}
-	log1 := log.Level(zerolog.ErrorLevel).With().Caller().Logger() //Caller¶à´òÓ¡ ´íÎóĞĞÊı
-	// {"level":"error","error":"×Ô¶¨Òå´íÎó","time":"2024","caller":"e:/goprojects/main.go:35"}
-	// {"level":"fatal","error":"×Ô¶¨Òå´íÎó","time":"2024","caller":"e:/goprojects/main.go:37"}
+	log1 := log.Level(zerolog.ErrorLevel).With().Caller().Logger() //Callerå¤šæ‰“å° é”™è¯¯è¡Œæ•°
+	// {"level":"error","error":"è‡ªå®šä¹‰é”™è¯¯","time":"2024","caller":"e:/goprojects/main.go:35"}
+	// {"level":"fatal","error":"è‡ªå®šä¹‰é”™è¯¯","time":"2024","caller":"e:/goprojects/main.go:37"}
 
-	//log1.Error() ÏûÏ¢¼¶±ğ
-	log1.Error().Err(errors.New("×Ô¶¨Òå´íÎó")).Msg("")
-	//{"level":"error","error":"×Ô¶¨Òå´íÎó","time":"2024-06-28T18:37:04+08:00"}
-	log1.Fatal().Err(errors.New("×Ô¶¨Òå´íÎó")).Send()
-	//{"level":"fatal","error":"×Ô¶¨Òå´íÎó","time":"2024-06-28T18:38:21+08:00"}
+	//log1.Error() æ¶ˆæ¯çº§åˆ«
+	log1.Error().Err(errors.New("è‡ªå®šä¹‰é”™è¯¯")).Msg("")
+	//{"level":"error","error":"è‡ªå®šä¹‰é”™è¯¯","time":"2024-06-28T18:37:04+08:00"}
+	log1.Fatal().Err(errors.New("è‡ªå®šä¹‰é”™è¯¯")).Send()
+	//{"level":"fatal","error":"è‡ªå®šä¹‰é”™è¯¯","time":"2024-06-28T18:38:21+08:00"}
 }
 			
 		
-[Ğ´ÎÄ¼ş]
+[å†™æ–‡ä»¶]
 package main
 
 import (
@@ -652,25 +656,25 @@ func main() {
 
 	f, err := os.OpenFile("D:/my.log", os.O_CREATE|os.O_APPEND, os.ModePerm)
 	if err != nil {
-		log.Panic().Err(err).Send() //ÄÚ²¿µ÷ÓÃpanic
+		log.Panic().Err(err).Send() //å†…éƒ¨è°ƒç”¨panic
 	}
 	defer f.Close()
 
-	multi := zerolog.MultiLevelWriter(f, os.Stdout) //¶à·ÖÖ§Ğ´ ÎÄ¼şºÍ¿ØÖÆÌ¨
-	//Timesta()Õâ¸öÈ«ĞÂµÄlOggerÔö¼ÓÊ±¼ä´ÁÊä³ö
+	multi := zerolog.MultiLevelWriter(f, os.Stdout) //å¤šåˆ†æ”¯å†™ æ–‡ä»¶å’Œæ§åˆ¶å°
+	//Timesta()è¿™ä¸ªå…¨æ–°çš„lOggerå¢åŠ æ—¶é—´æˆ³è¾“å‡º
 	logger := zerolog.New(multi).With().Timestamp().Logger()
 	logger.Info().Msg("Write to Control Screen and File") //{"level":"info","time":1719571970,"message":"Write to Control Screen and File"}
 
 }
 		
-[¹ö¶¯ÈÕÖ¾]	±ê×¼¿âÃ»ÓĞÌá¹© 
+[æ»šåŠ¨æ—¥å¿—]	æ ‡å‡†åº“æ²¡æœ‰æä¾› 
 
 go get gopkg.in/natefinch/lumberjack.v2
 
-	µ¥¸öÈÕÖ¾ÎÄ¼ş»áÅòÕÍ
-	¹ö¶¯:Éú³ÉÒ»¸öĞÂÍ¬ÃûÎÄ¼ş£¬°ÑÔ­À´µÄÎÄ¼şÖØÃüÃû
-		Ê±¼ä
-		´óĞ¡
+	å•ä¸ªæ—¥å¿—æ–‡ä»¶ä¼šè†¨èƒ€
+	æ»šåŠ¨:ç”Ÿæˆä¸€ä¸ªæ–°åŒåæ–‡ä»¶ï¼ŒæŠŠåŸæ¥çš„æ–‡ä»¶é‡å‘½å
+		æ—¶é—´
+		å¤§å°
 
 package main
 
@@ -689,19 +693,19 @@ func main() {
 
 	f, err := os.OpenFile("D:/my.log", os.O_CREATE|os.O_APPEND, os.ModePerm)
 	if err != nil {
-		log.Panic().Err(err).Send() //ÄÚ²¿µ÷ÓÃpanic
+		log.Panic().Err(err).Send() //å†…éƒ¨è°ƒç”¨panic
 	}
 
 	l := &lumberjack.Logger{
 		Filename:   "d:/routine.log",
-		MaxBackups: 2,     //³öµ±Ç°ÕıÔÚĞ´ÈëµÄÈÕÖ¾ÎÄ¼şÍâ£¬ÀúÊ·ÈÕÖ¾×î¶à±£Áô2¸ö
-		Compress:   false, //È±Ê¡²»Ñ¹Ëõ
-		MaxAge:     1,     //1Ìì
-		MaxSize:    1,     //È±Ê¡Öµ100 £¬100M ³¬¹ı1MÁ¢¼´¹ö¶¯
-	} //ÊµÏÖÁËWriter½Ó¿Ú µÃµ½Ò»¸ö×Ô¶¨Òå¹ö¶¯Logger
+		MaxBackups: 2,     //å‡ºå½“å‰æ­£åœ¨å†™å…¥çš„æ—¥å¿—æ–‡ä»¶å¤–ï¼Œå†å²æ—¥å¿—æœ€å¤šä¿ç•™2ä¸ª
+		Compress:   false, //ç¼ºçœä¸å‹ç¼©
+		MaxAge:     1,     //1å¤©
+		MaxSize:    1,     //ç¼ºçœå€¼100 ï¼Œ100M è¶…è¿‡1Mç«‹å³æ»šåŠ¨
+	} //å®ç°äº†Writeræ¥å£ å¾—åˆ°ä¸€ä¸ªè‡ªå®šä¹‰æ»šåŠ¨Logger
 	defer l.Close()
 
-	multi := zerolog.MultiLevelWriter(f, os.Stdout, l) //¶à·ÖÖ§Ğ´ ÎÄ¼şºÍ¿ØÖÆÌ¨
+	multi := zerolog.MultiLevelWriter(f, os.Stdout, l) //å¤šåˆ†æ”¯å†™ æ–‡ä»¶å’Œæ§åˆ¶å°
 	logger := zerolog.New(multi).With().Timestamp().Logger()
 	for {
 		time.Sleep(1 * time.Microsecond)
@@ -710,7 +714,7 @@ func main() {
 	}
 }
 
-[´òÓ¡´íÎóÕ»]
+[æ‰“å°é”™è¯¯æ ˆ]
 package main
 
 import (
@@ -741,12 +745,12 @@ func main() {
 		err := recover()
 		switch v := err.(type) {
 		case nil:
-			log.Debug().Msg("Ã»ÓĞ´íÎó")
+			log.Debug().Msg("æ²¡æœ‰é”™è¯¯")
 		case runtime.Error:
 			fmt.Println(string(debug.Stack()))
 			log.Error().Caller(3).Err(v).Str("stack", string(debug.Stack())).Send()
 		default:
-			log.Debug().Msg(fmt.Sprintf("ÆäËû´íÎó", v))
+			log.Debug().Msg(fmt.Sprintf("å…¶ä»–é”™è¯¯", v))
 		}
 	}()
 
