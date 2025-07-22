@@ -354,6 +354,11 @@ func init() {
 			2 prefix
 			3 flags配置标记，各种标记提供一些能力
 	func Default()*Logger { return std }// log.Default()->std *Logger 只读getter
+
+        操作系统概念FD文件描述符
+        stdin 0
+        stdout 1 蓝色
+        stderr 2 红色
 	三个快捷方法
 		log.Print * 0
 		log.Fatal* log.Print* + os.Exit(1) 之后代码不再执行
